@@ -2,9 +2,7 @@
 Homework for Week 2 Day 1
 
 ##Car
-```
-initialize(model, engine)
-```
+`initialize(model, engine)`
 `accelerate()` - deferred to engine
 
 `brake()`
