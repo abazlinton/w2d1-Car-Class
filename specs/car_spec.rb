@@ -6,10 +6,7 @@ require_relative '../car.rb'
 class TestCar < MiniTest::Test
 
 	def setup
-
-		@test_car = Car.new("Astra", 120)
-
-
+		@test_car = Car.new("Astra", 120, "standard")
 	end
 
 	def test_type
@@ -17,7 +14,7 @@ class TestCar < MiniTest::Test
 	end
 
 	def test_engine
-		assert_equal( "standard", @test_car.engine)
+		assert_equal( "standard", @test_car.engine.type)
 	end
 
 	def test_fuel
@@ -31,6 +28,29 @@ class TestCar < MiniTest::Test
 	def test_speed
 		assert_equal( 0, @test_car.speed)
 	end
+
+	def test_turbo_engine
+		@test_car = Car.new("Astra", 120, "turbo")
+		assert_equal("turbo", @test_car.engine.type)
+	end
+
+	def test_accelerate_standard
+		@test_car = Car.new("Astra", 120, "standard")
+		@test_car.accelerate
+
+		assert_equal(10, @test_car.speed)
+		assert_equal(95, @test_car.fuel)
+	end
+
+	def test_accelerate_turbo
+		@test_car = Car.new("Astra", 120, "turbo")
+		@test_car.accelerate
+
+		assert_equal(12, @test_car.speed)
+		
+	end
+
+
 
 
 
