@@ -2,13 +2,13 @@
 Homework for Week 2 Day 1
 
 ##Car
-`initialize(model, engine)`
+`initialize( model, engine )`
 
 `accelerate()` - deferred to engine
 
 `brake()`
 
-`follow_sequence("aaabbb")` - accelerate 3 times, brake 3 times
+`follow_sequence( "aaabbb" )` - accelerate 3 times, brake 3 times
 ```
 @model
 @engine = engine
@@ -18,7 +18,7 @@ Homework for Week 2 Day 1
 ```
 #Engine
 ```
-initialize(type)
+initialize( type )
 accelerate()
 ```
 
