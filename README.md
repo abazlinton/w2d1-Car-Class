@@ -2,7 +2,7 @@
 Homework for Week 2 Day 1
 
 ##Car
-
+```
 initialize(model, engine)
 accelerate()
 brake()
@@ -13,12 +13,13 @@ follow_sequence("aaabbb") - accelerate 3 times, brake 3 times
 @top_speed = engine.top_speed
 @fuel
 @speed
-
-@Engine
-
+```
+#Engine
+```
 initialize(type)
 accelerate()
 
 @acceleration
 @fuel_use
 @top_speed
+```
