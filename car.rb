@@ -8,19 +8,23 @@ class Car
 	def initialize(model, top_speed, engine)
 		@model = model
 		@top_speed = top_speed
-		@engine = Engine.new(engine)
+		@engine = engine
 		@fuel = 100 ##### CONSTANT #####
 		@speed = 0
 	end
 
 	def accelerate
 		@speed += @engine.accelerate
-		@fuel -= 5
+		@fuel -= @engine.fuel_use
 	end
 
 	def break
+		#better order?
 		@speed -= 10
+		@speed = 0 if speed < 0
 	end
+
+	
 
 
 

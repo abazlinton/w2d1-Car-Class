@@ -14,17 +14,15 @@ class TestEngine < MiniTest::Test
 	end
 
 	def test_acc__turbo
-		assert_equal( 12, @turbo_engine.acc)
+		assert_equal( 12, @turbo_engine.acceleration)
 	end
 
-	def test_fuel__turbo
+	def test_fuel_use__turbo
 		assert_equal( 7, @turbo_engine.fuel_use)
-
 	end
 
 	def test_acc__eco
-		assert_equal( 8, @eco_engine.acc)
-
+		assert_equal( 8, @eco_engine.acceleration)
 	end
 
 	def test_fuel_use__eco
@@ -32,17 +30,18 @@ class TestEngine < MiniTest::Test
 	end
 
 	def test_acc__standard
-		assert_equal( 10, @standard_engine.acc)
-
+		assert_equal( 10, @standard_engine.acceleration)
 	end
 
 	def test_fuel_use__standard
 		assert_equal( 5, @standard_engine.fuel_use)
 	end
 
-
-
-
+	def test_accelerate
+		assert_equal( 12, @turbo_engine.accelerate)
+		assert_equal( 8, @eco_engine.accelerate)
+		assert_equal( 10, @standard_engine.accelerate)
+	end
 
 
 end
