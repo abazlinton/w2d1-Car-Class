@@ -6,8 +6,8 @@ Homework for Week 2 Day 1
 initialize(model, engine)
 ```
 `accelerate()` - deferred to engine
-`brake()`
 
+`brake()`
 
 `follow_sequence("aaabbb")` - accelerate 3 times, brake 3 times
 ```
