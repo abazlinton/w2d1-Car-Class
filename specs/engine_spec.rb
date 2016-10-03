@@ -10,7 +10,6 @@ class TestEngine < MiniTest::Test
 		@turbo_engine = Engine.new("turbo")
 		@eco_engine = Engine.new("eco")
 		@standard_engine = Engine.new("standard")
-
 	end
 
 	def test_acc__turbo
@@ -42,6 +41,13 @@ class TestEngine < MiniTest::Test
 		assert_equal( 8, @eco_engine.accelerate)
 		assert_equal( 10, @standard_engine.accelerate)
 	end
+
+	def test_top_speed
+		assert_equal( 130, @turbo_engine.top_speed)
+		assert_equal( 100, @eco_engine.top_speed)
+		assert_equal( 110, @standard_engine.top_speed)
+	end
+
 
 
 end
