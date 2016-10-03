@@ -20,7 +20,7 @@ class Car
 		@speed = @top_speed if @speed > @top_speed
 	end
 
-	def break
+	def brake
 		#better order?
 		@speed -= 10
 		@speed = 0 if @speed < 0
@@ -34,7 +34,7 @@ class Car
 			if command_string[ counter ] == "a"
 				self.accelerate
 			elsif command_string[ counter ] == "b"
-				self.break
+				self.brake
 			end
 		end
 	end
