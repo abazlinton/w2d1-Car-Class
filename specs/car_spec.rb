@@ -10,7 +10,7 @@ class TestCar < MiniTest::Test
         @test_car = Car.new("Astra", @test_engine)
     end
 
-    def test_type
+    def test_model
         assert_equal( "Astra", @test_car.model)
     end
 
