@@ -20,7 +20,9 @@ Homework for Week 2 Day 1
 ```
 initialize(type)
 accelerate()
+```
 
+```
 @acceleration
 @fuel_use
 @top_speed
