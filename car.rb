@@ -1,4 +1,4 @@
-require_relative 'engine'
+
 
 
 class Car
@@ -9,7 +9,7 @@ class Car
         @model = model
         @engine = engine
         @top_speed = engine.top_speed
-        @fuel = 100 ##### CONSTANT #####
+        @fuel = 100
         @speed = 0
     end
 
@@ -21,14 +21,12 @@ class Car
     end
 
     def brake
-        #better order?
         @speed -= 10
         @speed = 0 if @speed < 0
     end
 
     def follow_sequence(command_string)
         counter = 0
-        commands = []
         commands_count = command_string.length
         for counter in 0..( commands_count - 1 )
             if command_string[ counter ] == "a"
@@ -38,9 +36,7 @@ class Car
             end
         end
     end
-
-
-    
+ 
 end
 
 
