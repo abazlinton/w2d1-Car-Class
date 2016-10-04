@@ -1,7 +1,8 @@
 require 'minitest/autorun'
 require 'minitest/rg'
 require 'pry-byebug'
-require_relative '../car.rb'
+require_relative '../car'
+require_relative '../engine'
 
 class TestCar < MiniTest::Test
 
@@ -101,7 +102,6 @@ class TestCar < MiniTest::Test
         @test_car.follow_sequence("aaaaaaaaaaaaaaaaaaaa")
         assert_equal( 0, @test_car.speed )
     end
-
 
 
 end
